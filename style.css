@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+--primary: #ff6b6b;
+--secondary: #4ecdc4;
+--accent: #ffbe0b;
+--light: #fff9e6;
+--dark: #1a1a2e;
+}
+    body {
+      font-family: 'Pacifico', cursive;
+    }
+
+#typing-name::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  z-index: 1000;
+  opacity: 0.8;
+  animation: confettiFall 3s linear infinite;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 70px;
+  border-radius: 50%;
+  animation: balloonFloat 15s infinite ease-in;
+  z-index: -1;
+}
+
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+    .name {
+    font-size: 3.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+        
+
+        
+        .balloon::before {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 25px;
+            width: 2px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .balloon:nth-child(1) {
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff3b3b);
+            left: 10%;
+            top: 10%;
+            animation-duration: 25s;
+        }
+        
+        .balloon:nth-child(2) {
+            background: radial-gradient(circle at 30% 30%, #4ecdc4, #2a9d8f);
+            left: 25%;
+            top: 20%;
+            animation-duration: 20s;
+        }
+        
+        .balloon:nth-child(3) {
+            background: radial-gradient(circle at 30% 30%, #ffbe0b, #ff9e00);
+            right: 15%;
+            top: 15%;
+            animation-duration: 22s;
+        }
+        
+        .balloon:nth-child(4) {
+            background: radial-gradient(circle at 30% 30%, #9b5de5, #7209b7);
+            right: 5%;
+            top: 30%;
+            animation-duration: 18s;
+        }
+.sticker {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: floatSticker 4s ease-in-out infinite;
+}
+
+@keyframes floatSticker {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+
+
+/* smoother enter-from-right and exit-to-left animations */
+@keyframes enterRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes exitLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-30px); }
+}
+
+/* classes toggled by JS */
+.enter-from-right {
+  animation: enterRight 700ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+.exit-to-left {
+  animation: exitLeft 700ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* optional: ensure smooth layout and that the animated element won't affect surrounding flow */
+#wish-wrapper { overflow: hidden; }
+#birthday-wish { display: block; will-change: transform, opacity; }
+
+
+
+
+
+
+        
