@@ -69,7 +69,7 @@ function updateCountdown() {
     const diff = nextBirthday - now; // Keep 'now' with time so timer ticks live
 
     if (diff <= 0) {
-        document.getElementById('countdown').textContent = "🎉 Happy Birthday May Myat Noe!";
+        document.getElementById('countdown').textContent = "🎉 Happy Birthday May May!";
         return;
     }
 
@@ -165,7 +165,7 @@ function typeEffect(element, text, speed = 100) {
   // timings (adjust to taste)
   const enterDuration = 700; // ms (matches CSS)
   const exitDuration = 700;  // ms (matches CSS)
-  const visibleDuration = 3600; // ms time to stay visible between enter & exit
+  const visibleDuration = 9600; // ms time to stay visible between enter & exit
 
   const enterAnimName = "enterRight";
   const exitAnimName = "exitLeft";
